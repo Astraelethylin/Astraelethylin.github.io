@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beranda – SMPN 59</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* Responsive Grid for Info Cards */
+    .grid-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--spacer);
+      margin-top: var(--spacer);
+    }
+    .info-card {
+      background-color: var(--clr-light);
+      padding: var(--spacer);
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: background-color 0.3s;
+    }
+    /* Dark-mode card background */
+    body.dark .info-card {
+      background-color: #333;
+    }
+    /* Text uses CSS variable so it flips automatically */
+    .info-card h3,
+    .info-card p,
+    main h1,
+    footer p {
+      color: var(--clr-text);
+      margin: 0;
+      word-wrap: break-word;
+    }
+    .info-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .info-card p {
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Inlined Header with Logo -->
+  <nav class="site-nav">
+    <a href="index.html" class="logo">
+      <img src="assets/logo/logo.png" alt="SMPN 59 Logo" style="max-width:100%; height: 55px; width: 55px; border-radius:6px;">
+    </a>
+    <div class="nav-toggle" id="navToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="class.html">Struktur</a></li>
+      <li><a href="bio.html">Biodata</a></li>
+      <li><a href="gallery.html">Galeri</a></li>
+      <li><button id="theme-toggle" class="btn-ghost">🌗</button></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content: Struktur Kelas -->
+  <main class="container">
+    <h1 style="color: var(--clr-text);">Struktur Kelas</h1>
+    <div class="grid-cards">
+      <div class="class-card">
+        <h3>Wali Kelas</h3>
+        <p>Mrs. Aulia Wulandari</p>
+      </div>
+      <div class="class-card">
+        <h3>Ketua Kelas</h3>
+        <p>M. Habil Abdiansyah</p>
+      </div>
+      <div class="class-card">
+        <h3>Wakil Ketua</h3>
+        <p>Marsya Aulia .R</p>
+      </div>
+      <div class="class-card">
+        <h3>Sekretaris</h3>
+        <p>Alisa Nabila .P<br>Naya Al Farizah</p>
+      </div>
+      <div class="class-card">
+        <h3>Koordinator HP</h3>
+        <p>Septian Dwi .R<br>Dimas Prasetyo .S</p>
+      </div>
+      <div class="class-card">
+        <h3>Bendahara</h3>
+        <p>Ulil Wildatul .M<br>Calista Vivian .A</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p style="color: var(--clr-text);">&copy; 1992–<span id="year"></span> SMP Negeri 59 Jakarta</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
